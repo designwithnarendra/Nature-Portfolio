@@ -1,0 +1,260 @@
+/* css/base.css */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400; /* Regular weight for body */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7; /* Slightly increased line height for readability */
+  overflow-x: hidden;
+  position: relative;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  padding-top: var(--header-height); /* Add padding for fixed header */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Base Typography */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0.01em; /* Adjusted letter spacing for Outfit */
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.75em;
+  line-height: 1.2; /* Tightened line height for headings */
+  transition: color 0.4s ease;
+}
+h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700; /* Bold */
+}
+h2 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+}
+h3 {
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  margin-bottom: 0.6em;
+  font-weight: 500; /* Medium */
+}
+h4 {
+  font-size: clamp(1.1rem, 3vw, 1.2rem);
+  color: var(--text-accent);
+  margin-bottom: 0.4em;
+  font-weight: 500;
+}
+h5 {
+  font-size: clamp(1rem, 2.8vw, 1.05rem);
+  font-weight: 500;
+  color: var(--heading-color);
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
+  margin-bottom: 1.5em;
+  color: var(--text-secondary);
+  font-weight: 400;
+  transition: color 0.4s ease;
+}
+strong {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Base Link Styles */
+a {
+  color: var(--text-accent);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+/* Exclude specific links from underline effect */
+a.logo,
+a.social-link,
+a.btn {
+  text-decoration: none;
+}
+a.logo::after,
+a.social-link::after,
+a.btn::after {
+  display: none !important; /* Ensure no underline/leaf on these */
+}
+
+a:not(.btn):not(.logo):not(.social-link)::after {
+  /* Vine underline */
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    background-color 0.4s ease;
+}
+a:not(.btn):not(.logo):not(.social-link):hover {
+  color: var(--heading-color);
+}
+a:not(.btn):not(.logo):not(.social-link):hover::after {
+  transform: scaleX(1);
+}
+
+/* Base Button Styles */
+.btn {
+  display: inline-block;
+  padding: 14px 32px; /* Slightly more padding */
+  color: var(--text-on-accent-bg);
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Outfit', sans-serif; /* Use heading font for buttons */
+  font-size: clamp(0.9rem, 2.2vw, 1rem);
+  border-radius: 40px 20px 30px 20px; /* Original unique border-radius */
+  position: relative;
+  overflow: hidden;
+  transition: background-image 0.4s ease,
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+/* Shimmer Effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--shimmer-color),
+    transparent
+  );
+  transition: left 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
+}
+.btn:hover::before {
+  left: 100%;
+}
+.btn:active {
+  transform: translateY(-1px) scale(1.01);
+}
+
+/* Primary Button Specifics */
+.btn-primary {
+  background-image: linear-gradient(to right, var(--emerald) 0%, #287850 100%);
+  box-shadow: 0 5px 15px var(--shadow-color-light);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background-image: linear-gradient(
+    to right,
+    var(--deep-forest) 0%,
+    #154030 100%
+  );
+  box-shadow: 0 8px 20px var(--shadow-color-dark);
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* Base Leaf Icon Hover Effect */
+.btn::after,
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--text-accent);
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(-45deg) scale(0);
+  transform-origin: bottom left;
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0.3s ease, background-color 0.4s ease;
+  z-index: -1;
+  pointer-events: none;
+  top: -5px;
+  right: -5px;
+}
+nav ul li a::after {
+  top: 0px;
+  right: -10px;
+} /* Position adjustment for nav */
+
+.btn:hover::after,
+nav ul li a:hover::after {
+  opacity: 0.8;
+  transform: rotate(10deg) scale(1) translateX(-3px) translateY(-3px);
+}
+
+/* Base Scroll Reveal Styles */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+}
+.reveal-up {
+  transform: translateY(50px); /* Slightly increased */
+}
+.reveal-up.is-visible {
+  transform: translateY(0);
+}
+.reveal-left {
+  transform: translateX(-50px);
+}
+.reveal-left.is-visible {
+  transform: translateX(0);
+}
+.reveal-right {
+  transform: translateX(50px);
+}
+.reveal-right.is-visible {
+  transform: translateX(0);
+}
+
+/* Base Decoration Styles */
+.decoration {
+  position: absolute;
+  opacity: var(--decoration-opacity);
+  z-index: 0;
+  pointer-events: none;
+  transition: transform 1.5s ease-out;
+}
+.decoration path,
+.decoration circle,
+.decoration polyline {
+  stroke: var(--text-accent);
+  transition: stroke 0.4s ease;
+}
+/* Ensure fill is also handled if needed */
+.decoration circle[fill] {
+  fill: var(--text-accent);
+  transition: fill 0.4s ease;
+}

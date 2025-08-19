@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design With Narendra | UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Outfit:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="loader">
+    <div class="leaf-spinner"></div>
+  </div>
+
+  <header id="mainHeader">
+    <div class="header-content container"> <a href="#" class="logo">Design With Narendra</a>
+      <nav>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <div class="dark-mode-toggle-container">
+              <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle Theme">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 9c-1.65 0-3 1.35-3 3s1.35 3 3 3 3-1.35 3-3-1.35-3-3-3zm0 8c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zM1 13h3c.55 0 1-.45 1-1s-.45-1-1-1H1c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h3c.55 0 1-.45 1-1s-.45-1-1-1h-3c-.55 0-1 .45-1 1s.45 1 1 1zM11.5 2.05c0-.55.45-1 1-1s1 .45 1 1v3c0 .55-.45 1-1 1s-1-.45-1-1v-3zm0 17.9c0-.55.45-1 1-1s1 .45 1 1v3c0 .55-.45 1-1 1s-1-.45-1-1v-3zM5.99 4.58c-.39-.39-1.02-.39-1.41 0l-2.12 2.12c-.39.39-.39 1.02 0 1.41s1.02.39 1.41 0l2.12-2.12c.39-.39.39-1.02 0-1.41zm13.42 13.42c-.39-.39-1.02-.39-1.41 0l-2.12 2.12c-.39.39-.39 1.02 0 1.41s1.02.39 1.41 0l2.12-2.12c.39-.39.39-1.02 0-1.41zM2.46 18.01l2.12-2.12c.39-.39.39-1.02 0-1.41s-1.02-.39-1.41 0l-2.12 2.12c-.39.39-.39 1.02 0 1.41s1.02.39 1.41 0zm17.07-13.42l-2.12 2.12c-.39.39-.39 1.02 0 1.41s1.02.39 1.41 0l2.12-2.12c.39-.39.39-1.02 0-1.41s-1.02-.39-1.41 0z" />
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M11.1 12.08c-2.33-4.51-.5-8.48.53-10.07C6.27 2.2 1.98 6.59 1.98 12c0 5.52 4.48 10 10 10 4.84 0 8.84-3.44 9.8-8.01.09-.46-.34-.86-.81-.81-4.21.25-7.78-3.37-8.87-7.1z" />
+                </svg>
+              </button>
+              <span class="dark-mode-label" aria-hidden="true"></span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-content reveal reveal-left">
+        <h4 class="hero-greeting">Hi there 👋</h4>
+        <p class="hero-intro">
+          I know you’ve probably got a long list of portfolios to go through today, so I’ll keep this short and useful.
+          My goal here is the same as in my design work: understand your needs, cut the noise, and show you exactly what
+          matters.
+        </p>
+        <div class="hero-essentials">
+          <h4 class="essentials-title">Here are the essentials:</h4>
+          <ul>
+            <li>7 years of end-to-end product design (web & mobile)</li>
+            <li>2 years leading and mentoring designers</li>
+            <li>Skilled at turning research into insights and insights into outcomes</li>
+            <li>Currently seeking senior/lead product design roles in the EU</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn btn-primary">Let's Validate If I'm Your Solution</a>
+      </div>
+      <div class="hero-image-column reveal reveal-right">
+        <div class="hero-image-wrapper">
+          <div class="hero-image"></div>
+          <svg class="hero-decoration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="none" stroke="var(--text-accent)" stroke-width="1.5"
+              d="M 151.6,128.3 C 141,150.3 112,163.3 88.3,161.6 C 64.6,160 46.8,143.9 36.3,124.3 C 25.8,104.7 22.7,81.4 29.8,60.1 C 36.9,38.8 54.2,20.9 75.3,13.4 C 96.4,5.9 121.3,8.7 140.7,21.9 C 160.1,35.1 174,58.7 172.5,82.8 C 171,106.9 162.2,106.3 151.6,128.3 Z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <h2>Featured Projects</h2>
+      </div>
+      <div class="project-list">
+        <div class="project-item reveal reveal-left">
+          <div class="project-left">
+            <h3>Eco-Friendly Shopping App</h3>
+            <div class="problem-statement">
+              <h4>The Challenge:</h4>
+              <p>Users struggled to identify sustainable products and understand their environmental impact while
+                shopping online.</p>
+            </div>
+            <div class="impact-metrics">
+              <div class="metric-badge"><span class="value">↑ 35%</span> <span class="label">Sustainable Choices</span>
+              </div>
+              <div class="metric-badge"><span class="value">88%</span> <span class="label">Task Success Rate</span>
+              </div>
+            </div>
+            <a href="case-study.html" class="btn btn-primary">View Trailer</a>
+          </div>
+          <div class="project-right">
+            <div class="device-frame mobile-frame">
+              <div class="screen">
+                <img src="https://placehold.co/300x600/B8C4B8/1A4D3A?text=Eco+App+GIF" alt="Eco App Prototype GIF">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-item reveal reveal-right">
+          <div class="project-left">
+            <h3>Mindfulness Dashboard</h3>
+            <div class="problem-statement">
+              <h4>The Challenge:</h4>
+              <p>Users found existing mindfulness apps cluttered and lacked clear progress tracking for motivation.</p>
+            </div>
+            <div class="impact-metrics">
+              <div class="metric-badge"><span class="value">↑ 50%</span> <span class="label">Session Completion</span>
+              </div>
+              <div class="metric-badge"><span class="value">92%</span> <span class="label">User Satisfaction</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary">View Trailer</a>
+          </div>
+          <div class="project-right">
+            <div class="device-frame mac-frame">
+              <div class="screen">
+                <img src="https://placehold.co/800x500/D0C4AB/1A4D3A?text=Mindfulness+App+GIF"
+                  alt="Mindfulness App Prototype GIF">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-item reveal reveal-left">
+          <div class="project-left">
+            <h3>Garden Planner Website</h3>
+            <div class="problem-statement">
+              <h4>The Challenge:</h4>
+              <p>Novice gardeners felt overwhelmed by planning and scheduling tasks for year-round garden maintenance.
+              </p>
+            </div>
+            <div class="impact-metrics">
+              <div class="metric-badge"><span class="value">↓ 40%</span> <span class="label">Support Queries</span>
+              </div>
+              <div class="metric-badge"><span class="value">↑ 60%</span> <span class="label">User Engagement</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary">View Trailer</a>
+          </div>
+          <div class="project-right">
+            <div class="device-frame mobile-frame">
+              <div class="screen">
+                <img src="https://placehold.co/300x600/F8F5E6/1A4D3A?text=Garden+Planner+GIF"
+                  alt="Garden Planner Prototype GIF">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg class="decoration leaf-decoration-projects" width="250" height="250" viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M10,50 Q20,20 50,10 Q80,20 90,50 Q80,80 50,90 Q20,80 10,50 Z" fill="none" stroke-width="0.5"></path>
+      <path d="M50,10 C60,30 70,40 50,50 C70,60 60,70 50,90" stroke-width="0.3" fill="none"></path>
+    </svg>
+  </section>
+
+  <section id="contact" class="contact">
+    <svg class="decoration" style="top: 15%; right: 8%; width: 160px; transform: rotate(25deg);" viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M20,20 C40,10 60,10 80,20 S90,60 80,80 C60,90 40,90 20,80 S10,40 20,20 Z" fill="none"
+        stroke-width="0.4" />
+      <path d="M50,25 C60,35 60,65 50,75 S40,65 40,50 S40,35 50,25 Z" fill="none" stroke-width="0.3" />
+    </svg>
+    <div class="container reveal reveal-up">
+      <h2>Let's Create Something Beautiful</h2>
+      <p>I'm always open to discussing product design work or partnership opportunities.</p>
+      <a href="mailto:your.email@example.com" class="btn btn-primary">Get In Touch</a>
+      <a href="" class="btn btn-primary">Find Me on LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-container">
+      <a href="#" class="footer-logo">Design With Narendra</a>
+      <!-- <div class="social-links">
+        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+      </div> -->
+      <div class="copyright">
+        &copy; <span id="current-year"></span> Design With Narendra. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

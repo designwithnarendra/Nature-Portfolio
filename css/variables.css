@@ -1,0 +1,69 @@
+/* css/variables.css */
+
+/* CSS Variables - Light Mode (Default) */
+:root {
+  --header-height: 80px; /* Define header height for body padding */
+
+  --bg-primary: var(--white);
+  --bg-secondary: var(--ivory);
+  --bg-accent: var(--deep-forest);
+  --text-primary: var(--text-dark);
+  --text-secondary: var(--text-light);
+  --text-accent: var(--emerald);
+  --text-on-accent-bg: var(
+    --white
+  ); /* Text used ON the accent background (footer) */
+  --heading-color: var(--deep-forest);
+  --border-color: var(--taupe);
+  --border-hover-color: var(--emerald);
+  --frame-bg: #f0f0f0;
+  --frame-border: #d1d1d1;
+  --screen-bg: #111;
+  --decoration-opacity: 0.15; /* Increased opacity */
+  --shadow-color-light: rgba(45, 134, 89, 0.25);
+  --shadow-color-dark: rgba(26, 77, 58, 0.35);
+  --shimmer-color: rgba(255, 255, 255, 0.25);
+  --header-bg-scrolled: rgba(255, 255, 255, 0.8); /* Light glassmorphism bg */
+  --footer-text-color: rgba(255, 255, 255, 0.8); /* Footer text color */
+  --footer-copyright-color: rgba(
+    255,
+    255,
+    255,
+    0.6
+  ); /* Footer copyright color */
+
+  /* Base Colors */
+  --emerald: #2d8659;
+  --deep-forest: #1a4d3a;
+  --sage: #b8c4b8;
+  --ivory: #f8f5e6;
+  --taupe: #d0c4ab;
+  --gold: #d4af37;
+  --white: #ffffff;
+  --text-dark: #333;
+  --text-light: #666;
+}
+
+/* Dark Mode Variables ("Night Forest") */
+body.dark-mode {
+  --bg-primary: #1a2e27; /* Very dark desaturated green */
+  --bg-secondary: #2a4038; /* Slightly lighter dark green */
+  --bg-accent: var(--emerald);
+  --text-primary: var(--ivory);
+  --text-secondary: var(--sage);
+  --text-accent: var(--emerald);
+  --text-on-accent-bg: var(--white); /* Footer logo/icon text */
+  --heading-color: var(--ivory);
+  --border-color: #4a685a;
+  --border-hover-color: var(--sage);
+  --frame-bg: #333;
+  --frame-border: #555;
+  --screen-bg: #000;
+  --decoration-opacity: 0.18;
+  --shadow-color-light: rgba(45, 134, 89, 0.3);
+  --shadow-color-dark: rgba(88, 196, 140, 0.3);
+  --shimmer-color: rgba(248, 245, 230, 0.15);
+  --header-bg-scrolled: rgba(26, 46, 39, 0.85);
+  --footer-text-color: var(--white); /* Brighter footer text */
+  --footer-copyright-color: rgba(255, 255, 255, 0.7); /* Brighter copyright */
+}
